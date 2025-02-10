@@ -1,3 +1,10 @@
+/**
+ * Inicializa y configura el servidor Express con las rutas, middlewares y la conexión a la base de datos.
+ * Esta función configura el servidor Express utilizando varios middlewares, maneja las rutas de la API, 
+ * y establece la conexión con la base de datos MongoDB. En caso de fallar la conexión a la base de datos o 
+ * la inicialización del servidor, se muestra un error en consola y el proceso se detiene.
+ */
+
 "use strict"
 
 import express from "express"

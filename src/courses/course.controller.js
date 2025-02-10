@@ -2,7 +2,11 @@ import Course from "../courses/courses.model.js";
 import User from "../user/user.model.js"
 
 
-
+/**
+ * Se encarga de crear los cursos. Solo se permite que los usuarios con roles de profesor creen cursos.
+ * El profesor debe existir para que este proceso se realice. El sistema recibe los datos y permite al profesor 
+ * crear los cursos que desee.
+ */
 export const crearCurso = async (req, res) => {
     try {
         const { nameCourse, description, duration,teacher} = req.body;
@@ -37,6 +41,11 @@ export const crearCurso = async (req, res) => {
     }
 };
 
+/**
+ * Elimina los cursos, o mejor dicho, los oculta al ponerlos en estado "removed" (eliminado).
+ * Verifica que el curso pertenezca al profesor y cambia el estado del curso.
+ * Al cambiar el estado a "removed", también elimina a los alumnos asignados.
+ */
 export const eliminarCurso = async(req, res) =>{
     try {
         const { professorId, courseId } = req.body;
@@ -82,6 +91,11 @@ export const eliminarCurso = async(req, res) =>{
     }
 };
 
+/**
+ * Se encarga de actualizar la información de un curso de un profesor. Solo permite la modificación de cursos activos.
+ * También verifica que el curso enviado pertenezca al profesor. Tras pasar estos filtros importantes, se reciben los datos nuevos 
+ * y se modifican. Este proceso solo permite modificar ciertos datos, ya que al actualizar no es necesario cambiar las partes sensibles.
+ */
 export const actualizarCursos = async (req, res) => {
     try {
         const { professorId, courseId } = req.body; 
@@ -136,6 +150,11 @@ export const actualizarCursos = async (req, res) => {
     }
 };
 
+/**
+ * Se encarga de mostrar la lista de cursos que crea un profesor, filtrando de manera que solo un profesor pueda acceder a ella.
+ * Solo permite ver los cursos activos y no aquellos que estén eliminados. En caso de no tener cursos, muestra un mensaje al respecto.
+ * Si todo se cumple, se muestra la lista de cursos del profesor.
+ */
 export const ProfesorCursos = async (req, res) => {
     try {
         const { uid } = req.params;
@@ -177,6 +196,11 @@ export const ProfesorCursos = async (req, res) => {
     }
 };
 
+/**
+ * Se encarga de asignar un curso a un alumno, filtrando el rol para permitir que solo los estudiantes se registren.
+ * También evita que se unan a más de 3 cursos y que se inscriban en el mismo curso más de una vez.
+ * Solo permite a los alumnos unirse a cursos activos o en curso, y no a aquellos que están eliminados.
+ */
 export const unirseCurso = async (req, res) => {
     try {
         const { uid, courseId } = req.body;
@@ -243,7 +267,11 @@ export const unirseCurso = async (req, res) => {
     }
 };
 
-
+/**
+ * Se encarga de la función para los alumnos, para ver sus cursos.
+ * Este filtra el ID que se le pasa, verificando que sea un alumno y no un profesor.
+ * Luego, busca a qué cursos está asignado y proporciona la información de estos.
+ */
 export const estudiantesCursos = async (req, res) => {
     try {
         const { uid } = req.params;

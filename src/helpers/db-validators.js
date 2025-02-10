@@ -1,3 +1,11 @@
+/**
+ * Este archivo contiene varias funciones que verifican la existencia de un correo electrónico, 
+ * nombre de usuario, ID de usuario o ID de curso en la base de datos. Si algún dato ya está registrado 
+ * o no se encuentra en la base de datos, la función lanza un error con un mensaje correspondiente.
+ * Estas funciones utilizan los modelos de Mongoose para interactuar con la base de datos y asegurar 
+ * que los datos sean únicos o válidos antes de realizar ciertas acciones.
+ */
+
 import User from "../user/user.model.js"
 import Course from "../courses/courses.model.js"
 

@@ -1,3 +1,14 @@
+/**
+ * Este middleware se encarga de eliminar un archivo cargado si ocurre un error durante el procesamiento 
+ * de la solicitud, para evitar que los archivos innecesarios queden almacenados en el servidor.
+ * Si un archivo fue cargado y se encuentra en el sistema de archivos, se intenta eliminar utilizando
+ * `fs.promises.unlink`. Si la eliminación falla, se muestra un mensaje de error en la consola.
+ * 
+ * Si el error tiene un código de estado 400 o contiene un objeto `errors`, se responde con un error 
+ * con estado 400 y los detalles del error. Si no es así, se responde con un error 500 y el mensaje 
+ * correspondiente.
+ */
+
 import fs from "fs/promises";
 import { join } from "path"
 

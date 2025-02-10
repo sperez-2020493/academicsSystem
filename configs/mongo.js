@@ -1,3 +1,9 @@
+/**
+ * Se encarga de manejar los eventos de conexión y desconexión, 
+ * informando sobre el estado de la conexión a través de mensajes en consola.
+ * Además, gestiona los posibles errores durante el proceso de conexión.
+ */
+
 'use strict'
 
 import mongoose from "mongoose"

@@ -1,3 +1,12 @@
+/**
+ * Configuración para manejar la carga de archivos usando Multer.
+ * 
+ * El archivo configura Multer para que los usuarios puedan subir archivos, como imágenes, al servidor. 
+ * 
+ * La función `createMulterConfig` toma la carpeta donde se guardarán los archivos como parámetro y devuelve una configuración de Multer. 
+ * En este caso, se usa para guardar las fotos de perfil de los usuarios en la carpeta `profile-pictures`.
+ */
+
 import multer from "multer";
 import { dirname, extname, join } from "path";
 import { fileURLToPath } from "url"

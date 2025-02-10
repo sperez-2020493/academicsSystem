@@ -1,3 +1,8 @@
+/**
+ * Es el esquema del modelo de curso, define la estructura de los documnetos
+ * de curso en la base de datos de MongoDB.
+ * */
+
 import { Schema, model } from "mongoose";
 
 const courseSchema = Schema({

@@ -1,0 +1,98 @@
+{
+    "auth": {
+      "register": {
+        "method": "POST",
+        "url": "http://localhost:3000/studentsSystem/v1/auth/register",
+        "headers": { "Content-Type": "application/json" },
+        "body": {
+          "name": "String",
+          "surname": "String",
+          "username": "String",
+          "email": "String",
+          "password": "String",
+          "profilePicture": "file",
+          "phone": "String",
+          "role": "String"
+        }
+      },
+      "login": {
+        "method": "POST",
+        "url": "http://localhost:3000/studentsSystem/v1/auth/login",
+        "headers": { "Content-Type": "application/json" },
+        "body": {
+          "username": "String",
+          "password": "String"
+        }
+      }
+    },
+    "students": {
+      "deleteStudent": {
+        "method": "DELETE",
+        "url": "http://localhost:3000/studentsSystem/v1/user/deleteUser/:uid"
+      },
+      "updateStudent": {
+        "method": "PUT",
+        "url": "http://localhost:3000/studentsSystem/v1/user/updateUser/:uid",
+        "headers": { "Content-Type": "application/json" },
+        "body": {
+          "name": "String",
+          "surname": "String",
+          "username": "String",
+          "email": "String",
+          "phone": "String"
+        }
+      },
+      "joinCourse": {
+        "method": "POST",
+        "url": "http://localhost:3000/studentsSystem/v1/course/alumnoJoin",
+        "headers": { "Content-Type": "application/json" },
+        "body": {
+          "uid": "String ID",
+          "courseId": "String ID"
+        }
+      },
+      "listCourses": {
+        "method": "GET",
+        "url": "http://localhost:3000/studentsSystem/v1/course/alumnos/:uid/courses"
+      }
+    },
+    "teachers": {
+      "createCourse": {
+        "method": "POST",
+        "url": "http://localhost:3000/studentsSystem/v1/course/createCourse",
+        "headers": { "Content-Type": "application/json" },
+        "body": {
+          "nameCourse": "String",
+          "duration": "String",
+          "description": "String",
+          "teacher": "String ID"
+        }
+      },
+      "deleteCourse": {
+        "method": "POST",
+        "url": "http://localhost:3000/studentsSystem/v1/course/deleteCourse",
+        "headers": { "Content-Type": "application/json" },
+        "body": {
+          "professorId": "String ID",
+          "courseId": "String ID"
+        }
+      },
+      "updateCourse": {
+        "method": "PUT",
+        "url": "http://localhost:3000/studentsSystem/v1/course/update",
+        "headers": { "Content-Type": "application/json" },
+        "body": {
+          "professorId": "String ID",
+          "courseId": "String ID",
+          "nameCourse": "String",
+          "description": "String",
+          "duration": "String"
+        }
+      },
+      "listCourses": {
+        "method": "GET",
+        "url": "http://localhost:3000/studentsSystem/v1/course/profesor/:uid/cursos"
+      }
+    }
+  }
+  

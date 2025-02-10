@@ -1,3 +1,12 @@
+/**
+ * Validador de datos para solicitudes de registro, inicio de sesión, actualización y eliminación de usuarios,
+ * y la creación de cursos. Utiliza `express-validator` para validar y verificar la integridad de los datos
+ * antes de proceder con las operaciones en la base de datos.
+ *
+ * Además, cada validador se asegura de que los campos sean válidos antes de pasar al siguiente middleware.
+ * Si los datos no son válidos, los errores se devuelven al cliente con mensajes.
+ */
+
 import { body, check, param } from "express-validator";
 import { emmailExist, usernameExist, userExists } from "../helpers/db-validators.js";
 import { validarCampos } from "./validar-campos.js"

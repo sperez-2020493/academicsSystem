@@ -1,3 +1,9 @@
+/**
+ * Define el esquema y modelo para los usuarios en la base de datos utilizando Mongoose. El esquema especifica los 
+ * campos y las restricciones para cada uno de ellos, y se utiliza para crear o interactuar con la colección de usuarios en la 
+ * base de datos MongoDB.
+ */
+
 import {Schema, model} from "mongoose";
 
 const userSchema = Schema({
