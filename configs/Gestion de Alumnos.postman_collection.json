@@ -1,0 +1,406 @@
+{
+	"info": {
+		"_postman_id": "7c372b80-1ead-4053-b017-54b8c80fdd6a",
+		"name": "Gestion de Alumnos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41958993"
+	},
+	"item": [
+		{
+			"name": "Agregar Profesor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Sam\",\r\n    \"surname\": \"Cap\",\r\n    \"username\": \"Samsss\",\r\n    \"email\": \"sspere@gmail.com\",\r\n    \"password\":\"12345678\",\r\n    \"profilePicture\": \"null\",\r\n    \"phone\": \"78541236\",\r\n    \"role\": \"PROFESOR_ROLE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/studentsSystem/v1/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"studentsSystem",
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Alumno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Sam\",\r\n    \"surname\": \"Cap\",\r\n    \"username\": \"Samsss\",\r\n    \"email\": \"sspere@gmail.com\",\r\n    \"password\":\"12345678\",\r\n    \"profilePicture\": \"null\",\r\n    \"phone\": \"78541236\",\r\n    \"role\": \"PROFESOR_ROLE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/studentsSystem/v1/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"studentsSystem",
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoginProfesor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Samsss\",\r\n     \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/studentsSystem/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"studentsSystem",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoginAlumno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Samsss\",\r\n     \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/studentsSystem/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"studentsSystem",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar Alumno",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Samuel Alexander\",\r\n    \"surname\":\"Perez Capito\",\r\n    \"username\": \"jluis\",\r\n    \"email\": \"js@gmail.com\",\r\n    \"phone\": \"44444444\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/studentsSystem/v1/user/updateUser/67a9463ba54c107ee3f87f3d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"studentsSystem",
+						"v1",
+						"user",
+						"updateUser",
+						"67a9463ba54c107ee3f87f3d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear curso",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nameCourse\": \"Sociales\",\r\n  \"duration\":\"204 dias\",\r\n  \"description\": \"Ciencias Sociales\",\r\n  \"teacher\": \"67a97e3a7b07a4b99aa0620c\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/studentsSystem/v1/course/createCourse",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"studentsSystem",
+						"v1",
+						"course",
+						"createCourse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar cursos",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"professorId\": \"67a9468ea54c107ee3f87f43\",  \r\n    \"courseId\": \"67a94797a54c107ee3f87f54\",\r\n    \"nameCourse\": \"Fisica24\",\r\n    \"description\": \"Mas  difisil que nunca\",\r\n    \"duration\": \"5 semanas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/studentsSystem/v1/course/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"studentsSystem",
+						"v1",
+						"course",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista de Profesor",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/studentsSystem/v1/course/profesor/67a9468ea54c107ee3f87f43/cursos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"studentsSystem",
+						"v1",
+						"course",
+						"profesor",
+						"67a9468ea54c107ee3f87f43",
+						"cursos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unirte a curso",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"uid\": \"67a94613a54c107ee3f87f39\",   \r\n    \"courseId\": \"67a957559f4b2be2d95636bf\"\r\n}  ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/studentsSystem/v1/course/alumnoJoin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"studentsSystem",
+						"v1",
+						"course",
+						"alumnoJoin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar cursos alumno ",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/studentsSystem/v1/course/alumnos/67a94613a54c107ee3f87f39/courses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"studentsSystem",
+						"v1",
+						"course",
+						"alumnos",
+						"67a94613a54c107ee3f87f39",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar curso",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"professorId\": \"67a97e3a7b07a4b99aa0620c\",  \r\n    \"courseId\": \"67a97f377b07a4b99aa0621a\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/studentsSystem/v1/course/deleteCourse",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"studentsSystem",
+						"v1",
+						"course",
+						"deleteCourse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ELIMINAR ESTUDIANTE",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/studentsSystem/v1/user/deleteUser/67a9463ba54c107ee3f87f3d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"studentsSystem",
+						"v1",
+						"user",
+						"deleteUser",
+						"67a9463ba54c107ee3f87f3d"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
